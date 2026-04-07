@@ -1,0 +1,35 @@
+# Exclude all files
+*
+
+# Include README.md, VERSION_CONTROL.md, and .gitignore
+!README.md
+!VERSION_CONTROL.md
+!.gitignore
+
+# Include only .py files under the src directory
+!src/
+!src/**/*.py
+
+# Include only .xlsx files under the data directory
+!src/data/
+!src/data/**/*.xlsx
+
+# Exclude the temp subdirectory under data
+src/data/temp/
+
+# Exclude temporary files and system files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Exclude virtual environment
+myenv/
+
+# Exclude editor configurations
+.vscode/
+.idea/
+.spyproject/
