@@ -1,8 +1,10 @@
 # velocity_effective_stress_relation
 
-## Project Introduction
+## Repository Introduction
 
-This project aims to study the relationship between P-wave and S-wave velocities in rocks and stress, develop new models, and explore their applications. The project title is "Stress dependence of P- and S-Wave velocities in rocks: New models and applications".
+This repository contains the source code and data for the paper **"Stress dependence of P- and S-Wave velocities in rocks: New models and applications"**.
+
+The repository provides the implementation of new models for analyzing the relationship between P-wave and S-wave velocities in rocks and stress, along with the data used in the study.
 
 ## Directory Structure
 
@@ -11,25 +13,31 @@ velocity_effective_stress_relation/
 ├── src/                  # Source code directory
 │   ├── data/             # Data directory
 │   │   ├── temp/         # Temporary data (not under version control)
-│   │   └── *.xlsx        # Data files
-│   ├── *.py              # Python scripts
-├── images/               # Images directory
-├── manuscript/           # Manuscript directory
-├── myenv/                # Virtual environment (not under version control)
-├── README.md             # Project documentation
+│   │   └── *.xlsx        # Data files used in the paper
+│   ├── *.py              # Python scripts implementing the models
+├── images/               # Images and figures
+├── manuscript/           # Paper manuscript files
+├── README.md             # Repository documentation
 ├── VERSION_CONTROL.md    # Version control instructions
 └── .gitignore            # Git ignore file configuration
 ```
 
-## Main Features
+## Key Files
 
-- Analyze the relationship between P-wave and S-wave velocities in rocks and stress
-- Develop new velocity-stress relationship models
-- Apply models for case studies
-- Sensitivity analysis
-- Data visualization
+### Source Code
+- `src/birch_rock_velocity_fit.py`: Implementation of velocity-stress relationship models
+- `src/case_study.py`: Case studies using the models
+- `src/sensitivity_analysis.py`: Sensitivity analysis of model parameters
+- `src/nu_heatmap.py`: Poisson's ratio analysis
+- `src/plot_cl_cs_vs_nu.py`: Velocity vs. Poisson's ratio plotting
 
-## Installation Instructions
+### Data Files
+- `src/data/GOODWYN-6.xlsx`: Goodwyn-6 well data
+- `src/data/WILCOX-1.xlsx`: Wilcox-1 well data
+- `src/data/WILCOX-2.xlsx`: Wilcox-2 well data
+- `src/data/birch1960_Simmons1964.xlsx`: Experimental data from Birch (1960) and Simmons (1964)
+
+## Usage
 
 1. Clone the repository:
    ```bash
@@ -37,52 +45,17 @@ velocity_effective_stress_relation/
    cd velocity_effective_stress_relation
    ```
 
-2. Create a virtual environment (optional):
-   ```bash
-   python -m venv myenv
-   # Windows
-   myenv\Scripts\activate
-   # Linux/Mac
-   source myenv/bin/activate
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    pip install numpy matplotlib pandas
    ```
 
-## Usage
-
-1. Prepare data: Place data files in the `src/data/` directory
-
-2. Run scripts:
+3. Run the scripts to reproduce the results from the paper:
    ```bash
-   # Run case study
    python src/case_study.py
-   
-   # Run sensitivity analysis
    python src/sensitivity_analysis.py
-   
-   # Run velocity fitting
    python src/birch_rock_velocity_fit.py
    ```
-
-3. View results: Results will be output to the console and may generate charts
-
-## Data Description
-
-- `src/data/GOODWYN-6.xlsx`: Goodwyn-6 well data
-- `src/data/WILCOX-1.xlsx`: Wilcox-1 well data
-- `src/data/WILCOX-2.xlsx`: Wilcox-2 well data
-- `src/data/birch1960_Simmons1964.xlsx`: Experimental data from Birch (1960) and Simmons (1964)
-
-## Version Control
-
-This project uses Git for version control. For detailed version control instructions, please refer to the `VERSION_CONTROL.md` file.
-
-## Contribution
-
-Contributions and suggestions are welcome. If you have any questions, please submit them through GitHub Issues.
 
 ## License
 
